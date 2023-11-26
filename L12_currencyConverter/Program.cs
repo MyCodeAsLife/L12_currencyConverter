@@ -54,60 +54,73 @@ namespace L12_currencyConverter
                     case CommandExit:
                         isOpen = false;
                         break;
+
                     case CommandRubToUsd:
                         Console.WriteLine("Введите количество средств для обмена: ");
                         amountOfMoneyToConvert = Convert.ToInt32(Console.ReadLine());
-                        if (amountOfMoneyToConvert < rubleWallet)
+
+                        if (amountOfMoneyToConvert <= rubleWallet)
                         {
                             rubleWallet -= amountOfMoneyToConvert;
                             dollarWallet += amountOfMoneyToConvert / rubToUsd;
                         }
                         break;
+
                     case CommandRubToEur:
                         Console.WriteLine("Введите количество средств для обмена: ");
                         amountOfMoneyToConvert = Convert.ToInt32(Console.ReadLine());
-                        if (amountOfMoneyToConvert < rubleWallet)
+
+                        if (amountOfMoneyToConvert <= rubleWallet)
                         {
                             rubleWallet -= amountOfMoneyToConvert;
                             euroWallet += amountOfMoneyToConvert / rubToEur;
                         }
                         break;
+
                     case CommandEurToUsd:
                         Console.WriteLine("Введите количество средств для обмена: ");
                         amountOfMoneyToConvert = Convert.ToInt32(Console.ReadLine());
-                        if (amountOfMoneyToConvert < euroWallet)
+
+                        if (amountOfMoneyToConvert <= euroWallet)
                         {
                             euroWallet -= amountOfMoneyToConvert;
                             dollarWallet += amountOfMoneyToConvert / eurToUsd;
                         }
                         break;
+
                     case CommandEurToRub:
                         Console.WriteLine("Введите количество средств для обмена: ");
                         amountOfMoneyToConvert = Convert.ToInt32(Console.ReadLine());
-                        if (amountOfMoneyToConvert < euroWallet)
+
+                        if (amountOfMoneyToConvert <= euroWallet)
                         {
                             euroWallet -= amountOfMoneyToConvert;
                             rubleWallet += amountOfMoneyToConvert / eurToRub;
                         }
                         break;
+
                     case CommandUsdToRub:
                         Console.WriteLine("Введите количество средств для обмена: ");
                         amountOfMoneyToConvert = Convert.ToInt32(Console.ReadLine());
-                        if (amountOfMoneyToConvert < dollarWallet)
+
+                        if (amountOfMoneyToConvert <= dollarWallet)
                         {
                             dollarWallet -= amountOfMoneyToConvert;
                             rubleWallet += amountOfMoneyToConvert / usdToRub;
                         }
                         break;
+
                     case CommandUsdToEur:
                         Console.WriteLine("Введите количество средств для обмена: ");
                         amountOfMoneyToConvert = Convert.ToInt32(Console.ReadLine());
-                        if (amountOfMoneyToConvert < dollarWallet)
+
+                        if (amountOfMoneyToConvert <= dollarWallet)
                         {
                             dollarWallet -= amountOfMoneyToConvert;
                             euroWallet += amountOfMoneyToConvert / usdToEur;
                         }
                         break;
+
                     default:
                         Console.WriteLine("Вы ввели неивестную команду. Повторите ввод пожалуйста.");
                         break;
