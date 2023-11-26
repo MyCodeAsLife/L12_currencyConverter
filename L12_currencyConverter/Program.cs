@@ -44,9 +44,9 @@ namespace L12_currencyConverter
                 Console.Clear();
                 Console.WriteLine("Добро пожаловать в обменник.");
                 Console.WriteLine($"У вас на счетах: {rubleWallet} рублей. {dollarWallet} долларов. {euroWallet} евро.\n");
-                Console.WriteLine("Выберите одну из следующих операций(введите номер операции):\n1 - Обменять рубли на долары\t" +
-                                  "2 - Обменять рубли на евро\n3 - Обменять евро на доллары\t4 - Обменять евро на рубли\n" +
-                                  "5 - Обменять доллары на рубли\t6 - Обменять доллары на евро\nДля выхода, введите exit");
+                Console.WriteLine($"Выберите одну из следующих операций(введите номер операции):\n{CommandRubToUsd} - Обменять рубли на долары\t" +
+                                  $"{CommandRubToEur} - Обменять рубли на евро\n{CommandEurToUsd} - Обменять евро на доллары\t{CommandEurToRub} - Обменять евро на рубли\n" +
+                                  $"{CommandUsdToRub} - Обменять доллары на рубли\t{CommandUsdToEur} - Обменять доллары на евро\nДля выхода, введите {CommandExit}");
                 selectCommand = Console.ReadLine();
 
                 switch (selectCommand)
