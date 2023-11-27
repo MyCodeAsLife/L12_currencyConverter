@@ -64,6 +64,8 @@ namespace L12_currencyConverter
                             rubleWallet -= amountOfMoneyToConvert;
                             dollarWallet += amountOfMoneyToConvert / rubToUsd;
                         }
+                        else
+                            Console.WriteLine("У вас на счету недостаточно средств для операции.");
                         break;
 
                     case CommandRubToEur:
@@ -75,6 +77,8 @@ namespace L12_currencyConverter
                             rubleWallet -= amountOfMoneyToConvert;
                             euroWallet += amountOfMoneyToConvert / rubToEur;
                         }
+                        else
+                            Console.WriteLine("У вас на счету недостаточно средств для операции.");
                         break;
 
                     case CommandEurToUsd:
@@ -86,6 +90,8 @@ namespace L12_currencyConverter
                             euroWallet -= amountOfMoneyToConvert;
                             dollarWallet += amountOfMoneyToConvert / eurToUsd;
                         }
+                        else
+                            Console.WriteLine("У вас на счету недостаточно средств для операции.");
                         break;
 
                     case CommandEurToRub:
@@ -97,6 +103,8 @@ namespace L12_currencyConverter
                             euroWallet -= amountOfMoneyToConvert;
                             rubleWallet += amountOfMoneyToConvert / eurToRub;
                         }
+                        else
+                            Console.WriteLine("У вас на счету недостаточно средств для операции.");
                         break;
 
                     case CommandUsdToRub:
@@ -108,6 +116,8 @@ namespace L12_currencyConverter
                             dollarWallet -= amountOfMoneyToConvert;
                             rubleWallet += amountOfMoneyToConvert / usdToRub;
                         }
+                        else
+                            Console.WriteLine("У вас на счету недостаточно средств для операции.");
                         break;
 
                     case CommandUsdToEur:
@@ -119,6 +129,8 @@ namespace L12_currencyConverter
                             dollarWallet -= amountOfMoneyToConvert;
                             euroWallet += amountOfMoneyToConvert / usdToEur;
                         }
+                        else
+                            Console.WriteLine("У вас на счету недостаточно средств для операции.");
                         break;
 
                     default:
